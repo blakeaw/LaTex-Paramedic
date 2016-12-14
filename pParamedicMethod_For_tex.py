@@ -5,8 +5,8 @@
 #	2. Emphasize the 'to be' verbs
 #	3. Underline common nominalizations
 #
-# Add these lines to the tex source after running and then 
-# recompile the pdf to see the changes (requires the tiks package)
+#  
+# Recompile the pdf using the modified file to see the changes 
 ##############################################
 
 def CheckForPreposition(word):
@@ -67,9 +67,12 @@ def StripPunctuation(word):
 	return new_word
 
 #open the original tex file
-ifile = open('CTNS_draft18.tex', 'r')
+ifile = open('file.tex', 'r')
 #open the output file
-ofile = open('Draft_parm.tex', 'w')
+ofile = open('file_parm.tex', 'w')
+
+
+###########
 for line in ifile:
 	for word in line.split():
 		punc=""
